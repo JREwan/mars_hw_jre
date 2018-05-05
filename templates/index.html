@@ -21,27 +21,106 @@
     <div class="row" id="mars-news">
       <div class="col-md-12">
         <h1 class="heading">Latest Mars News</h1>
-        <h3 class="heading">{{listings.title}}</h3>
-        <h4 class="heading">{{listings.mn_para}}</h4>
+        <h3 class="heading">{{dict.mn_title}}</h3>
+        <h4 class="heading">{{dict.mn_para}}</h4>
       </div>
     </div>
 
-    <!-- JPL Feature image -->
-    <div class="row" id="jpl-img">
-      <div class="col-md-6">
+    
+    <div class="row">
+      <!-- JPL Feature image -->
+      <div class="col-md-8">
         <h1 class="heading">JPL Featured Mars Image</h1>
-        <img src="https://www.jpl.nasa.gov/spaceimages/images/mediumsize/PIA17550_ip.jpg" alt="JPL Featured Image">
+        <img class="img-responsive" src="{{dict.mfi}}" alt="JPL Featured Image">
       </div>
+      <!-- Mars Weather -->
+      <div class="col-md-4">
+        <h4 class="heading">Current Weather on Mars</h4>
+        <h4 class="heading">{{dict.mw}}</h4>
+      </div>
+      <!-- Mars Facts -->
+      <div class="col-md-4">
+        <h2 class="heading">Mars Facts</h2>
+        <!-- Mars Facts table -->
+          <table border="1" class="dataframe">
+            <thead>
+              <tr style="text-align: right;">
+                <th>Description</th>
+                <th>Value</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th>Equatorial Diameter:</th>
+                <td>{{dict.mf_ed}}</td>
+              </tr>
+              <tr>
+                <th>Polar Diameter:</th>
+                <td>{{dict.mf_pd}}</td>
+              </tr>
+              <tr>
+                <th>Mass:</th>
+                <td>{{dict.mf_m}}</td>
+              </tr>
+              <tr>
+                <th>Moons:</th>
+                <td>{{dict.mf_moons}}</td>
+              </tr>
+              <tr>
+                <th>Orbit Distance:</th>
+                <td>{{dict.mf_od}}</td>
+              </tr>
+              <tr>
+                <th>Orbit Period:</th>
+                <td>{{dict.mf_op}}</td>
+              </tr>
+              <tr>
+                <th>Surface Temperature:</th>
+                <td>{{dict.mf_st}}</td>
+              </tr>
+              <tr>
+                <th>First Record:</th>
+                <td>{{dict.mf_fr}}</td>
+              </tr>
+              <tr>
+                <th>Recorded By:</th>
+                <td>{{dict.mf_rb}}</td>
+              </tr>
+            </tbody>
+          </table>
+
+        <!-- <h4 class="heading">{{dict.mf}}</h4> -->
+      </div>
+    </div>  
+      <!-- Mars hemispheres -->
+    <div class="row">
+      <div class="col-md-6">
+        <div class="hemisphere">
+          <h2 class="heading">{{dict.mh1_title}}</h2>
+          <img class="img-responsive" src={{dict.mh1_link}} alt="Valles Marineris Hemisphere">
+        </div>
+      </div>
+        <div class="col-md-6">
+          <div class="hemisphere">
+            <h2 class="heading">{{dict.mh2_title}}</h2>
+            <img class="img-responsive" src={{dict.mh2_link}} alt="Cerberus Hemiosphere">
+          </div> 
+        </div>
+        <div class="col-md-6">
+          <div class="hemisphere">
+            <h2 class="heading">{{dict.mh3_title}}</h2>
+            <img class="img-responsive" src={{dict.mh3_link}} alt="Schiaparelli Hemisphere">
+          </div> 
+        </div>
+        <div class="col-md-6">
+          <div class="hemisphere">
+                <h2 class="heading">{{dict.mh4_title}}</h2>
+                <img class="img-responsive" src={{dict.mh4_link}} alt="Syrtus Major Hemisphere">
+          </div>
+        </div>
+    </div>    
     </div>
-
-    <!-- Craigslist Listings -->
-    <!-- <div class="row" id="craiglist-listings"> -->
-      <!-- <div class="col-md-12"> -->
-        <!-- <h4 class="heading">{{listings.price}} {{listings.headline}}</h4> -->
-        <!-- <small>{{listings.hood}}</small> -->
-      <!-- </div> -->
-    <!-- </div> -->
-
+    
   </div>
 </body>
 
